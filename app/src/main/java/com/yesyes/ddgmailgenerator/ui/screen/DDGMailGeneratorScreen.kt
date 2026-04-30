@@ -54,7 +54,7 @@ fun DuckDuckGoMailGeneratorScreen(
         OutlinedTextField(
             value = token,
             onValueChange = { viewModel.onTokenChange(it) },
-            label = { Text("DUCKDUCKGO_ACCESS_TOKEN") },
+            label = { Text("DuckDuckGo API Token") },
             modifier = Modifier.fillMaxWidth(),
             singleLine = true
         )
@@ -134,7 +134,7 @@ fun AppPreview() {
             OutlinedTextField(
                 value = "",
                 onValueChange = {},
-                label = { Text("DuckDuckGo Access Token") },
+                label = { Text("DuckDuckGo API Token") },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true
             )

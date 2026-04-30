@@ -13,7 +13,7 @@ private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(na
 
 class DataStoreManager(private val context: Context) {
     companion object {
-        private val TOKEN_KEY = stringPreferencesKey("duckduckgo_access_token")
+        private val TOKEN_KEY = stringPreferencesKey("duckduckgo_api_token")
     }
 
     val tokenFlow: Flow<String> = context.dataStore.data
