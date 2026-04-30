@@ -22,6 +22,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "DDG Mail Generator"
+rootProject.name = "DDG Mail Alias Generator"
 include(":app")
  

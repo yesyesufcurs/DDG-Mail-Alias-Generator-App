@@ -16,7 +16,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.DDGMailGenerator">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,7 +25,7 @@
         </activity>
 
         <service
-            android:name=".service.DuckDuckGoTileService"
+            android:name=".service.DDGMailGeneratorTileService"
             android:icon="@mipmap/ic_launcher"
             android:label="DDG Mail"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"

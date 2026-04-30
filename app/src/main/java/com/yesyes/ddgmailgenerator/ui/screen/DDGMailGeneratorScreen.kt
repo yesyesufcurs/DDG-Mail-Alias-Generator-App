@@ -125,7 +125,7 @@ fun AppPreview() {
             verticalArrangement = Arrangement.Center
         ) {
             Text(
-                text = "DuckDuckGo Mail Generator",
+                text = "DuckDuckGo Mail Alias Generator",
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.padding(bottom = 32.dp)
@@ -134,7 +134,7 @@ fun AppPreview() {
             OutlinedTextField(
                 value = "",
                 onValueChange = {},
-                label = { Text("DUCKDUCKGO_ACCESS_TOKEN") },
+                label = { Text("DuckDuckGo Access Token") },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true
             )

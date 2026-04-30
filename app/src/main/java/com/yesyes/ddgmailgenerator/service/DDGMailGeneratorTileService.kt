@@ -17,7 +17,7 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class DuckDuckGoTileService : TileService() {
+class DDGMailGeneratorTileService : TileService() {
     private val serviceScope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
     private lateinit var dataStoreManager: DataStoreManager
     private val repository = DuckDuckGoRepository()
@@ -40,7 +40,7 @@ class DuckDuckGoTileService : TileService() {
                 val token = dataStoreManager.tokenFlow.first()
                 if (token.isBlank()) {
                     withContext(Dispatchers.Main) {
-                        Toast.makeText(this@DuckDuckGoTileService, "Please set token in app first", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this@DDGMailGeneratorTileService, "Please set token in app first", Toast.LENGTH_LONG).show()
                         tile.state = Tile.STATE_INACTIVE
                         tile.updateTile()
                     }
@@ -51,11 +51,11 @@ class DuckDuckGoTileService : TileService() {
                 result.onSuccess { email ->
                     copyToClipboard(email)
                     withContext(Dispatchers.Main) {
-                        Toast.makeText(this@DuckDuckGoTileService, "Email copied: $email", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@DDGMailGeneratorTileService, "Email copied: $email", Toast.LENGTH_SHORT).show()
                     }
                 }.onFailure { error ->
                     withContext(Dispatchers.Main) {
-                        Toast.makeText(this@DuckDuckGoTileService, "Error: ${error.message}", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@DDGMailGeneratorTileService, "Error: ${error.message}", Toast.LENGTH_SHORT).show()
                     }
                 }
 
@@ -65,7 +65,7 @@ class DuckDuckGoTileService : TileService() {
 
             } catch (e: Exception) {
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(this@DuckDuckGoTileService, "Unexpected error", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@DDGMailGeneratorTileService, "Unexpected error", Toast.LENGTH_SHORT).show()
                 }
                 tile.state = Tile.STATE_INACTIVE
                 tile.updateTile()
