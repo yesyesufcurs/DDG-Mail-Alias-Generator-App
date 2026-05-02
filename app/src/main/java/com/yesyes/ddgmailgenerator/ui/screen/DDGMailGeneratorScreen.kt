@@ -45,7 +45,7 @@ fun DuckDuckGoMailGeneratorScreen(
         verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = "DuckDuckGo Mail Generator",
+            text = "DuckDuckGo Mail Alias Generator",
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold,
             modifier = Modifier.padding(bottom = 32.dp)
