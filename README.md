@@ -19,10 +19,10 @@ A simple Android app that generates DuckDuckGo Mail aliases and copies them to y
 1. Paste your DuckDuckGo API token into the "DuckDuckGo API Token" field, this value is persistent and remains after closing the app.
 2. Options to generate an alias:
    - In-app: Tap the "Generate Email" button. A DDG email alias will be generated and automatically copied to your clipboard.
+     - <img src="demo_videos/DDGAliasGenVidUsage.gif" alt="Demo Video App Usage" width="240" height="531"> 
    - Anywhere: Add the DDG Mail Alias Generator Quick Settings tile to your device's quick settings and tap the tile to generate and copy a fresh alias.
+     - <img src="demo_videos/DDGAliasGenVidTile.gif" alt="Demo Video Quick Settings Tile" width="240" height="531">
 
-![Demo Video App Usage](demo_videos/DDGAliasGenVidUsage.gif)
-![Demo Video Quick Settings Tile](demo_videos/DDGAliasGenVidTile.gif)
 
 ## Warning
 Direct API usage is not officially documented by DuckDuckGo and should be used at your own risk.
