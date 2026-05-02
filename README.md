@@ -12,7 +12,7 @@ A simple Android app that generates DuckDuckGo Mail aliases and copies them to y
 
 ## Installation
 ### Install APK
-1. Install the latest (pre-)release apk file from the (Releases)[https://github.com/yesyesufcurs/DDG-Mail-Alias-Generator-App/releases]
+1. Install the latest (pre-)release apk file from the [Releases](https://github.com/yesyesufcurs/DDG-Mail-Alias-Generator-App/releases)
 
 ### Build using Android Studio
 1. Open the project in Android Studio (tested with Android Studio Panda 4).
