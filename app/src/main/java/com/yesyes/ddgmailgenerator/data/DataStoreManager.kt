@@ -13,17 +13,17 @@ private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(na
 
 class DataStoreManager(private val context: Context) {
     companion object {
-        private val TOKEN_KEY = stringPreferencesKey("duckduckgo_api_token")
+        private val API_TOKEN = stringPreferencesKey("duckduckgo_api_token")
     }
 
     val tokenFlow: Flow<String> = context.dataStore.data
         .map { preferences ->
-            preferences[TOKEN_KEY] ?: ""
+            preferences[API_TOKEN] ?: ""
         }
 
     suspend fun saveToken(token: String) {
         context.dataStore.edit { preferences ->
-            preferences[TOKEN_KEY] = token
+            preferences[API_TOKEN] = token
         }
     }
 }
