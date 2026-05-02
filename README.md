@@ -8,7 +8,7 @@ A simple Android app that generates DuckDuckGo Mail aliases and copies them to y
 
 ## Prerequisites
 - Android 12 (API 31) or newer.
-- A DuckDuckGo API token (obtainable via for instance this guide by [Bitwarden](bitwarden.com/help/generator/#tab-duckduckgo-3Uj911RtQsJD9OAhUuoKrz)). Use your preferred method to retrieve the token and paste it into the app.
+- A DuckDuckGo API token (obtainable via for instance this guide by [Bitwarden](https://bitwarden.com/help/generator/#tab-duckduckgo-3Uj911RtQsJD9OAhUuoKrz). Use your preferred method to retrieve the token and paste it into the app.
 
 ## Installation
 1. Open the project in Android Studio (tested with Android Studio Panda 4).
