@@ -15,11 +15,21 @@ class DuckDuckGoRepository {
     private val client = OkHttpClient()
     private val json = Json { ignoreUnknownKeys = true }
 
+    private companion object {
+        const val USER_AGENT =
+            "Mozilla/5.0 (Linux; Android 15; Pixel 8) AppleWebKit/537.36 " +
+            "(KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36"
+    }
+
     suspend fun generateEmail(token: String): Result<String> = withContext(Dispatchers.IO) {
         try {
             val request = Request.Builder()
                 .url("https://quack.duckduckgo.com/api/email/addresses")
+                .header("Accept", "*/*")
                 .header("Authorization", "Bearer $token")
+                .header("Origin", "https://duckduckgo.com")
+                .header("Referer", "https://duckduckgo.com/")
+                .header("User-Agent", USER_AGENT)
                 .post(ByteArray(0).toRequestBody(null))
                 .build()
 
